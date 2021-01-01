@@ -1,0 +1,43 @@
+{
+  "name": "river_city_wrestling",
+  "version": "1.0.0",
+  "description": "Web page for River City Wrestling",
+  "main": "main.js",
+  "scripts": {
+    "start": "node application.js",
+    "dev": "nodemon application.js"
+  },
+  "keywords": [],
+  "author": "Ethan Coyle",
+  "license": "MIT",
+  "dependencies": {
+    "@stripe/stripe-js": "^1.11.0",
+    "axios": "^0.21.0",
+    "bcryptjs": "^2.4.3",
+    "connect-flash": "^0.1.1",
+    "cors": "^2.8.5",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.0",
+    "express-session": "^1.17.1",
+    "form-data": "^3.0.0",
+    "form-serializer": "^2.5.0",
+    "fs": "0.0.1-security",
+    "https": "^1.0.0",
+    "jquery": "^3.5.1",
+    "mongodb": "^3.6.3",
+    "mongoose": "^5.11.3",
+    "mongoskin": "^2.1.0",
+    "mysql": "^2.18.1",
+    "node": "^15.3.0",
+    "node-fetch": "^2.6.1",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "path": "^0.12.7",
+    "stripe": "^8.127.0"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.6"
+  }
+}
