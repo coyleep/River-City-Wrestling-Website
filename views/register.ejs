@@ -1,0 +1,75 @@
+
+        <main>
+          <style>
+          input{
+            margin-left: 32%;
+          }
+          main{
+            text-align:center;
+            font-family:inherit;
+            font-weight:bold;
+            padding-right:30px;
+          }
+          h1{
+            padding-left:90px;
+          }
+          label{
+            font-size:19px;
+          }
+          h1{
+            font-size:50px;
+            padding-top:10px;
+            padding-bottom:15px;
+          }
+          button{
+            margin-bottom:20px;
+            padding-top:5px;
+          }
+          @media only screen and (max-width: 700px){
+            form{
+              text-align:left;
+              margin-left:10%;
+            }
+            input{
+              margin-left:10%;
+            }
+            button{
+              margin-left:40%;
+            }
+          }
+          </style>
+          <div class="wrapper">
+            <h1>Sign Up For Email List</h1>
+            <p>**This information only be used to update you with News and Information via email**</p>
+            <form id="test-form" method="POST" action="/users/register">
+                <div class="form-group1">
+                    <label for="Name">*First Name:</label>
+                    <input id="name" autofocus class="form-control" required name="Name" placeholder="Name" type="text" style="width:400px">
+                </div>
+                <div class="form-group1">
+                    <label for="Last_Name">Last Name:</label>
+                    <input id="last_name" autocomplete="off" required autofocus class="form-control" name="Last_Name" placeholder="Last Name" type="text" style="width:400px">
+                </div>
+                <div class="form-group1">
+                    <label for="Email">*Email:</label>
+                    <input id="email" autocomplete="off" required autofocus class="form-control" name="Email" placeholder="Email" type="email" style="width:400px">
+                </div>
+                <button id="submit-form" class="btn btn-primary" type="submit">Register</button>
+            </form>
+            <script>
+              const scriptURL = 'https://script.google.com/macros/s/AKfycbyYnXJWmKkMDfWlfTjeiPqyRo5zOneImMoCjHJcTcU-IH_JBz-f/exec'
+              const form = document.forms['test-form']
+
+              form.addEventListener('submit', e => {
+             e.preventDefault()
+                fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                  alert("You have been registered for Emails")
+                  window.location.replace("/");
+                })
+                .catch(error => console.error('Error!', error.message))
+            })
+
+            </script>
+          </div> 
+        </main>

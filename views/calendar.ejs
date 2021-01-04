@@ -1,0 +1,16 @@
+   <style>
+       form{
+           display:flex;
+            flex-direction: column;
+            width:300px;
+            align-items: center;
+       }
+   </style>
+   <form method="POST" action="/calendar/mongodb">
+         <input name="start" type="datetime-local" placeholder="start">
+         <input name="end" type="datetime-local" placeholder="end">
+         <input name="eventName" type="text" placeholder="event">
+         <textarea style="width:350px;margin-left:100px;"name="details" type="text" placeholder="details"></textarea>
+         <button onsubmit="submitClicked()"id="submit-calendar"class="btn-purchase btn btn-primary" type="submit">submit</button>
+    </form>
+    <script src="/css/calendar.js"></script>
