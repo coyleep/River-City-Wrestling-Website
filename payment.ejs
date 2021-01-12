@@ -1,0 +1,127 @@
+
+        <main>
+            <style>
+            .email-modal{
+              margin-left:0%;
+              margin-bottom:10px;
+            }
+            #card-element{
+              margin-bottom:10px;
+            }
+            input{
+              width:30%;
+            }
+            main{
+              text-align:center;
+              font-family:inherit;
+              font-weight:bold;
+            }
+            h1{
+              padding-left:130px;
+            }
+            h1{
+              font-size:50px;
+              padding-top:10px;
+              padding-bottom:15px;
+            }
+            button{
+              margin-bottom:20px;
+              padding-top:5px;
+            }
+            .select-style {
+                margin: auto;
+                width: 53%;
+                padding-top:5px;
+                padding: 15px;
+                text-align-last:center;
+
+            }
+
+            .select-style select {
+                padding: 5px 8px;
+                width: 50%;
+                box-shadow: none;
+            }
+
+            .select-style select:focus {
+                outline: none;
+            }
+            .form-group1{
+              padding-left:300px;
+              width:100%;
+            }
+            .form-group1 input{
+              width:50%;
+            }
+            .form-group1 label{
+             
+              display:block;
+              font-size:19px;
+              width:50%;
+              text-align:left;
+            }
+            @media only screen and (max-width: 700px){
+
+              h1{
+                font-size:50px;
+                padding:0px;
+              }
+              
+              .select-style{
+                margin-left:100px;
+                width:100%;
+                margin:auto;
+              }
+              .select-style select{
+                height:36px;
+                width:40%;
+                font-size:18px;
+              }
+             .form-group1{
+              padding-left:0px;
+              }
+              .form-group1 label{
+                margin-left:20%;
+              }
+              .form-group1 input{
+                margin-left:25%;
+              }
+              button{
+                width:30%;
+                height:auto;
+                margin-right:0px;
+              }
+              .btn-purchase{
+                font-size:20px;
+              }
+            }
+            </style>
+    <script src="https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=fetch"></script>
+    <script src="/css/payment.js" defer></script>
+    <script>
+      var stripePublicKey = '<%= stripePublicKey %>' 
+      </script>
+            <div class="wrapper">
+              <h1>Payments</h1>
+                <form id="form1" name="form1" method="POST">
+                    <div class="form-group1">
+                        <label for="Name">*First Name:</label>
+                        <input id="name" autofocus class="form-control" required name="Name" placeholder="Name" type="text" >
+                    </div>
+                    <div class="form-group1">
+                        <label for="Last_Name">Last Name:</label>
+                        <input id="last_name" autocomplete="off" autofocus class="form-control" name="Last_Name" placeholder="Last Name" type="text" >
+                    </div>
+                    <div class= "select-style">
+                      <select id = "dropdown">
+                        <option value=''>Select Amount of Days</option>
+                        <option name = "1"value='60.00'>1 Day/Week (60$)</option>
+                        <option name = "2"value='85.00'>2 Day/Week (85$)</option>
+                        <option name = "3"value='110.00'>3 Day/Week (110$)</option>
+                      </select>
+                    </div>
+                    <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+                    <script
+                        src="//checkout.stripe.com/v2/checkout.js"></script>
+                      </form>
+          </main>
