@@ -1,2 +1,3 @@
 # River-City-Wrestling-Website
-This is the actual website thing. Ethan this is the one
+Website for River City Wrestling. Created with Node.js
+
